@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill Gap Courses</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navcontainer">
+      <a href="../index.html" class="logo">
+        <img src="../assets/logo.png" alt="CareerBoost Logo" />
+      </a>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="#features" class="dropdown-toggle">Services</a>
+          <ul class="dropdown-menu">
+              <li><a href="../Registration/index.html">AI Job Matching</a></li>
+              <li><a href="../courses/index.html">Courses</a></li>
+              <li><a href="../dashboard/index.html#skillGap">Skill Gap Analysis</a></li>
+              <li><a href="../JOb insights/inddex.html">Real-Time Market Insights</a></li>
+              <li><a href="../Resume/resume.html">Resume Builder</a></li>
+              <li><a href="../community/index.html">Community Support</a></li>
+              <li><a href="../workshop/index.html">Workshop</a></li>
+          </ul>
+        </li>
+        <li><a href="../dashboard/index.html">Dashboard</a></li>
+        <li><a href="../index.html#about">About Us</a></li>
+        <li>
+          <div class="navbar-button">
+            <a href="../Registration/index.html" class="btn btn-auth">Register / Login</a>
+          </div>            
+        </li>
+      </ul>
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidebar Navigation for Mobile -->
+  <div class="sidebar" id="sidebar">
+    <ul>
+        <li><a href="../index.html#features">Services</a></li>
+        <li><a href="../dashboard/index.html">Dashboard</a></li>
+        <li><a href="../index.html#about">About Us</a></li>
+        <li><a href="../Registration/index.html">Register / Login</a></li>
+    </ul>
+  </div>
+
+    <!-- Header Section -->
+    <div class="header">
+      <h1>Courses to Bridge Your Skill Gap</h1>
+      <p>Explore courses across various fields to enhance your career</p>
+    </div>
+
+    <!-- Search Bar Section -->
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for courses..." />
+      <button onclick="searchCourses()">Search</button>
+    </div>
+
+    <!-- Course Cards Section -->
+    <div class="course-container" id="courseContainer">
+      <!-- Courses will be generated here by JavaScript -->
+    </div>
+
+    <!-- Load More Button -->
+    <div class="load-more">
+      <button id="loadMoreBtn">Load More Courses</button>
+    </div>
+
+
+    <script>
+
+      const hamburger = document.querySelector('.hamburger');
+      const sidebar = document.getElementById('sidebar');
+          
+      hamburger.addEventListener('click', () => {
+          sidebar.classList.toggle('active');
+      });
+
+      const courses = [
+        {
+          title: "Introduction to Data Science",
+          provider: "Coursera",
+          rating: 4.7,
+          image:
+            "https://th.bing.com/th/id/OIP.b1J8I9csh7eIQJORlzbybgHaEK?rs=1&pid=ImgDetMain/300x200/?data,science",
+          field: "Data Science",
+        },
+        {
+          title: "Graphic Design Basics",
+          provider: "Udemy",
+          rating: 4.5,
+          image:
+            "https://th.bing.com/th/id/OIP.odF3QFlKD_ByaN36ZfLdZQHaD3?w=770&h=402&rs=1&pid=ImgDetMain/300x200/?design,graphic",
+          field: "Design",
+        },
+        {
+          title: "Marketing in the Digital Age",
+          provider: "edX",
+          rating: 4.6,
+          image:
+            "https://image.slidesharecdn.com/thedigitalageofmarketing-150108140305-conversion-gate02/95/the-digital-age-of-marketing-1-638.jpg?cb=1420725822/300x200/?marketing,digital",
+          field: "Marketing",
+        },
+        {
+          title: "Financial Accounting Fundamentals",
+          provider: "LinkedIn Learning",
+          rating: 4.8,
+          image:
+            "https://themigration.com.au/wp-content/uploads/2021/06/2.png?finance,accounting",
+          field: "Finance",
+        },
+        {
+          title: "Software Engineering Principles",
+          provider: "edX",
+          rating: 4.9,
+          image:
+            "https://www.interviewbit.com/blog/wp-content/uploads/2022/02/Principles-of-Software-Engineering-2048x1000.png?software,engineering",
+          field: "Engineering",
+        },
+        {
+          title: "Basics of Photography",
+          provider: "Udemy",
+          rating: 4.7,
+          image:
+            "https://www.oneeducation.org.uk/wp-content/uploads/2021/04/Basic-Photography-Course.jpg?photography,basics",
+          field: "Photography",
+        },
+        {
+          title: "Artificial Intelligence for Everyone",
+          provider: "Coursera",
+          rating: 4.8,
+          image:
+            "https://cdn8.openculture.com/2019/03/16105642/AI_launch_assets-06-1024x576.png?ai,artificial,intelligence",
+          field: "Artificial Intelligence",
+        },
+        {
+          title: "Creative Writing Workshop",
+          provider: "MasterClass",
+          rating: 4.6,
+          image:
+            "https://piggy-rider.s3.ap-south-1.amazonaws.com/creative-writing-techniques-creatiwitty-inc-primary-image-PGWvXLmBszNUUqny_750_500.jpg?writing,creative",
+          field: "Creative Writing",
+        },
+        {
+          title: "Health and Wellness Coaching",
+          provider: "Udemy",
+          rating: 4.5,
+          image:
+            "https://www.weljii.com/wp-content/uploads/2021/03/internal-blog-3-weljii.jpg?wellness,health",
+          field: "Health",
+        },
+        {
+          title: "Cybersecurity Basics",
+          provider: "Pluralsight",
+          rating: 4.7,
+          image:
+            "https://i.ytimg.com/vi/9_IEcEl5BZI/maxresdefault.jpg?cybersecurity",
+          field: "Cybersecurity",
+        },
+        {
+          title: "Introduction to Music Production",
+          provider: "Berklee",
+          rating: 4.6,
+          image:
+            "https://media.insider.in/image/upload/c_crop,g_custom/v1579518500/j12yjwn49xfty2fzaybf.png?music,production",
+          field: "Music Production",
+        },
+        {
+          title: "Project Management Foundations",
+          provider: "LinkedIn Learning",
+          rating: 4.9,
+          image:
+            "https://www.alphaacademy.org/wp-content/uploads/2021/09/The-Foundation-Course-of-Project-Management.jpg?project,management",
+          field: "Management",
+        },
+      ];
+
+      const courseContainer = document.getElementById("courseContainer");
+      let coursesDisplayed = 6; // Start with 6 courses
+
+      function displayCourses(courseList) {
+        courseContainer.innerHTML = "";
+        for (let i = 0; i < courseList.length; i++) {
+          const course = courseList[i];
+          const courseCard = `
+                    <div class="course-card">
+                        <img src="${course.image}" alt="${course.title}" class="course-image">
+                        <div class="course-info">
+                            <h2 class="course-title">${course.title}</h2>
+                            <p class="course-provider">Provided by: ${course.provider}</p>
+                            <div class="course-rating">
+                                <span class="rating-star">⭐</span> ${course.rating}
+                            </div>
+                            <p>Field: ${course.field}</p>
+                            <p class="course-more-info">More Info</p>
+                        </div>
+                    </div>
+                `;
+          courseContainer.innerHTML += courseCard;
+        }
+      }
+
+      // Initial display
+      displayCourses(courses.slice(0, coursesDisplayed));
+
+      // Load more courses on button click
+      const loadMoreBtn = document.getElementById("loadMoreBtn");
+      loadMoreBtn.addEventListener("click", () => {
+        coursesDisplayed += 6;
+        if (coursesDisplayed >= courses.length) {
+          loadMoreBtn.style.display = "none";
+        }
+        displayCourses(courses.slice(0, coursesDisplayed));
+      });
+
+      // Search function
+      function searchCourses() {
+        const searchTerm = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+        const filteredCourses = courses.filter(
+          (course) =>
+            course.title.toLowerCase().includes(searchTerm) ||
+            course.field.toLowerCase().includes(searchTerm)
+        );
+        displayCourses(filteredCourses);
+      }
+    </script>
+
+  </body>
+</html>
