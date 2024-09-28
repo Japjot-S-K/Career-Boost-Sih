@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshops & Webinars</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navcontainer">
+      <a href="../index.html" class="logo">
+        <img src="../assets/logo.png" alt="CareerBoost Logo" />
+      </a>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="#features" class="dropdown-toggle">Services</a>
+          <ul class="dropdown-menu">
+              <li><a href="../Registration/index.html">AI Job Matching</a></li>
+              <li><a href="../courses/index.html">Courses</a></li>
+              <li><a href="../dashboard/index.html#skillGap">Skill Gap Analysis</a></li>
+              <li><a href="../JOb insights/inddex.html">Real-Time Market Insights</a></li>
+              <li><a href="../Resume/resume.html">Resume Builder</a></li>
+              <li><a href="../community/index.html">Community Support</a></li>
+              <li><a href="../workshop/index.html">Workshop</a></li>
+          </ul>
+        </li>
+        <li><a href="../dashboard/index.html">Dashboard</a></li>
+        <li><a href="../index.html#about">About Us</a></li>
+        <li>
+          <div class="navbar-button">
+            <a href="../Registration/index.html" class="btn btn-auth">Register / Login</a>
+          </div>            
+        </li>
+      </ul>
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidebar Navigation for Mobile -->
+  <div class="sidebar" id="sidebar">
+    <ul>
+        <li><a href="../index.html#features">Services</a></li>
+        <li><a href="../dashboard/index.html">Dashboard</a></li>
+        <li><a href="../index.html#about">About Us</a></li>
+        <li><a href="../Registration/index.html">Register / Login</a></li>
+    </ul>
+  </div>
+
+    <!-- Header Section -->
+    <header class="header-section">
+        <h1>Upcoming Workshops & Webinars</h1>
+        <p>Stay ahead in your career by attending our exclusive events!</p>
+    </header>
+
+
+    <!-- Search Bar Section -->
+<div class="search-container">
+    <input type="text" id="searchInput" class="search-input" placeholder="Search events...">
+    <button class="search-button">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="search-icon"
+        >
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" x2="15" y1="21" y2="15"></line>
+        </svg>
+    </button>
+</div>
+
+
+    <!-- Filter Section -->
+    <div class="filter-section">
+        <button onclick="filterEvents('all')" class="filter-btn">All</button>
+        <button onclick="filterEvents('workshop')" class="filter-btnn">Workshops</button>
+        <button onclick="filterEvents('webinar')" class="filter-btnn">Webinars</button>
+    </div>
+
+    <!-- Event Cards Section -->
+    <section class="event-container">
+        <div class="event-card workshop">
+            <img src="https://www.emergingprairie.com/wp-content/uploads/https-cdn.evbuc_.com-images-225924379-91212081245-1-original.20210817-160726-768x384.jpeg" alt="JavaScript Workshop" class="event-img">
+            <h2>Workshop: Mastering JavaScript</h2>
+            <p><strong>Date:</strong> 20th September 2024</p>
+            <p><strong>Time:</strong> 10:00 AM - 12:00 PM</p>
+            <p class="event-desc"><strong>Description:</strong> Learn advanced JavaScript techniques and best practices for modern web development.</p>
+            <a href="#" class="register-btn">Register Now</a>
+        </div>
+
+        <div class="event-card webinar">
+            <img src="https://th.bing.com/th/id/OIP.c5ofpEj3Yue8Du3NvT1-HwHaKg?rs=1&pid=ImgDetMain" alt="AI Webinar" class="event-img">
+            <h2>Webinar: Career Growth in AI</h2>
+            <p><strong>Date:</strong> 22nd September 2024</p>
+            <p><strong>Time:</strong> 2:00 PM - 3:30 PM</p>
+            <p class="event-desc"><strong>Description:</strong> Join industry experts to explore career opportunities and skills needed to succeed in AI.</p>
+            <a href="#" class="register-btn">Register Now</a>
+        </div>
+
+        <div class="event-card workshop">
+            <img src="https://images01.nicepagecdn.com/page/26/02/website-template-preview-2602684.jpg" alt="Responsive Websites Workshop" class="event-img">
+            <h2>Workshop: Building Responsive Websites</h2>
+            <p><strong>Date:</strong> 25th September 2024</p>
+            <p><strong>Time:</strong> 11:00 AM - 1:00 PM</p>
+            <p class="event-desc"><strong>Description:</strong> Learn how to create websites that work seamlessly across different devices and screen sizes.</p>
+            <a href="#" class="register-btn">Register Now</a>
+        </div>
+
+        <div class="event-card webinar">
+            <img src="https://i.ytimg.com/vi/ABOFcXW4SuM/maxresdefault.jpg" alt="Cyber Security Webinar" class="event-img">
+            <h2>Webinar: Introduction to Cyber Security</h2>
+            <p><strong>Date:</strong> 28th September 2024</p>
+            <p><strong>Time:</strong> 3:00 PM - 4:30 PM</p>
+            <p class="event-desc"><strong>Description:</strong> Learn the fundamentals of cyber security and how to protect your digital assets.</p>
+            <a href="#" class="register-btn">Register Now</a>
+        </div>
+
+        <div class="event-card workshop">
+            <img src="https://res.cloudinary.com/springboard-images/image/upload/w_1080,c_limit,q_auto,f_auto,fl_lossy/wordpress/2019/02/Untitled-design-3-scaled.jpg" alt="Machine Learning Workshop" class="event-img">
+            <h2>Workshop: Machine Learning for Beginners</h2>
+            <p><strong>Date:</strong> 30th September 2024</p>
+            <p><strong>Time:</strong> 10:00 AM - 12:30 PM</p>
+            <p class="event-desc"><strong>Description:</strong> Get started with machine learning concepts and basic algorithms.</p>
+            <a href="#" class="register-btn">Register Now</a>
+        </div>
+
+        <div class="event-card webinar">
+            <img src="https://th.bing.com/th/id/OIP.OyVGvfhwnn7EBKoP8yAakgHaE9?rs=1&pid=ImgDetMain" alt="Data Science Webinar" class="event-img">
+            <h2>Webinar: Data Science in Industry</h2>
+            <p><strong>Date:</strong> 5th October 2024</p>
+            <p><strong>Time:</strong> 1:00 PM - 2:30 PM</p>
+            <p class="event-desc"><strong>Description:</strong> Explore how data science is transforming industries and what skills are in demand.</p>
+            <a href="#" class="register-btn">Register Now</a>
+        </div>
+
+        <div class="event-card workshop">
+            <img src="https://www.emergingprairie.com/wp-content/uploads/https-cdn.evbuc_.com-images-214847039-91212081245-1-original.20220119-160939-768x384.jpeg" alt="HTML & CSS Workshop" class="event-img">
+            <h2>Workshop: Mastering HTML & CSS</h2>
+            <p><strong>Date:</strong> 8th October 2024</p>
+            <p><strong>Time:</strong> 10:00 AM - 12:00 PM</p>
+            <p class="event-desc"><strong>Description:</strong> Learn to build beautiful and responsive websites with HTML & CSS.</p>
+            <a href="#" class="register-btn">Register Now</a>
+        </div>
+
+        <div class="event-card webinar">
+            <img src="https://www.easternenterprise.com/wp-content/uploads/2022/11/cloud-computing-social.jpg" alt="Cloud Computing Webinar" class="event-img">
+            <h2>Webinar: Cloud Computing Essentials</h2>
+            <p><strong>Date:</strong> 12th October 2024</p>
+            <p><strong>Time:</strong> 2:00 PM - 3:30 PM</p>
+            <p class="event-desc"><strong>Description:</strong> Learn the fundamentals of cloud computing and its role in modern business.</p>
+            <a href="#" class="register-btn">Register Now</a>
+        </div>
+
+        <div class="event-card workshop">
+            <img src="https://cdn-images-1.medium.com/max/1024/1*z7LIzBjZHURS5H0pYjldLw.jpeg" alt="UX Design Workshop" class="event-img">
+            <h2>Workshop: Introduction to UX Design</h2>
+            <p><strong>Date:</strong> 15th October 2024</p>
+            <p><strong>Time:</strong> 11:00 AM - 1:30 PM</p>
+            <p class="event-desc"><strong>Description:</strong> Learn the principles of UX design and how to create user-friendly interfaces.</p>
+            <a href="#" class="register-btn">Register Now</a>
+        </div>
+
+        <div class="event-card webinar">
+            <img src="https://www.financialpoise.com/wp-content/uploads/2021/07/Blockchain-Basics-2_Blockchain-and-Supply-Chain-1-1024x576.jpg" alt="Blockchain Webinar" class="event-img">
+            <h2>Webinar: Blockchain Technology Basics</h2>
+            <p><strong>Date:</strong> 18th October 2024</p>
+            <p><strong>Time:</strong> 4:00 PM - 5:30 PM</p>
+            <p class="event-desc"><strong>Description:</strong> Discover the world of blockchain and how it’s disrupting traditional systems.</p>
+            <a href="#" class="register-btn">Register Now</a>
+        </div>
+
+        <div class="event-card workshop">
+            <img src="https://webthinkoutside.com/wp-content/uploads/2021/08/SEO-Strategies.jpg" alt="SEO Workshop" class="event-img">
+            <h2>Workshop: Advanced SEO Strategies</h2>
+            <p><strong>Date:</strong> 22nd October 2024</p>
+            <p><strong>Time:</strong> 10:30 AM - 12:30 PM</p>
+            <p class="event-desc"><strong>Description:</strong> Master advanced SEO techniques to boost your website's ranking.</p>
+            <a href="#" class="register-btn">Register Now</a>
+        </div>
+    </section>
+
+<script src="script.js" ></script>
+</body>
+</html>
+
+
