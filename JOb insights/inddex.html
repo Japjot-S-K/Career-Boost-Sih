@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Insights - Career Boost</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- For chart -->
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navcontainer">
+      <a href="../index.html" class="logo">
+        <img src="../assets/logo.png" alt="CareerBoost Logo" />
+      </a>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="#features" class="dropdown-toggle">Services</a>
+          <ul class="dropdown-menu">
+              <li><a href="../Registration/index.html">AI Job Matching</a></li>
+              <li><a href="../courses/index.html">Courses</a></li>
+              <li><a href="../dashboard/index.html#skillGap">Skill Gap Analysis</a></li>
+              <li><a href="../JOb insights/inddex.html">Real-Time Market Insights</a></li>
+              <li><a href="../Resume/resume.html">Resume Builder</a></li>
+              <li><a href="../community/index.html">Community Support</a></li>
+              <li><a href="../workshop/index.html">Workshop</a></li>
+          </ul>
+        </li>
+        <li><a href="../dashboard/index.html">Dashboard</a></li>
+        <li><a href="../index.html#about">About Us</a></li>
+        <li>
+          <div class="navbar-button">
+            <a href="../Registration/index.html" class="btn btn-auth">Register / Login</a>
+          </div>            
+        </li>
+      </ul>
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidebar Navigation for Mobile -->
+  <div class="sidebar" id="sidebar">
+    <ul>
+        <li><a href="../index.html#features">Services</a></li>
+        <li><a href="../dashboard/index.html">Dashboard</a></li>
+        <li><a href="../index.html#about">About Us</a></li>
+        <li><a href="../Registration/index.html">Register / Login</a></li>
+    </ul>
+  </div>
+
+  <!-- Job Insights Section -->
+  <section class="job-insights">
+    <div class="container">
+      <h2 class="section-title">Trending Jobs</h2>
+
+      <h3 class="para-title">Trending jobs often reflect shifts in technology, industry demands, and evolving market needs. Currently, roles in artificial intelligence, machine learning, cybersecurity, data science, and cloud computing are in high demand due to the growing reliance on digital technologies. Additionally, positions in healthcare, renewable energy, and sustainability are also gaining traction as industries focus on innovation and long-term growth. Keeping up with these trends can help professionals align their skills with future job market opportunities.</h3>
+      
+      <!-- Filter Section (optional) -->
+      <div class="filter-section">
+        <div class="filter">
+          <label for="industry-filter">Industry:</label>
+          <select id="industry-filter">
+            <option value="tech">Tech</option>
+            <option value="marketing">Marketing</option>
+            <option value="finance">Finance</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Article Section -->
+      <div class="articles">
+        <!-- Article 1 -->
+        <article class="job-article">
+          <div class="job-header">
+            <i class="fas fa-laptop-code job-icon"></i> <!-- Industry Icon -->
+            <h3>Software Engineer</h3>
+          </div>
+          <p><strong>Industry:</strong> Tech</p>
+          <p><strong>Location:</strong> San Francisco, CA</p>
+          <p>Software engineers are in high demand due to the rapid expansion of tech companies and the need for digital transformation across various sectors.</p>
+          <!-- Job Growth Graph -->
+          <canvas id="softwareEngineerChart" width="400" height="150"></canvas> <!-- Chart -->
+        </article>
+
+        <!-- Article 2 -->
+        <article class="job-article">
+          <div class="job-header">
+            <i class="fas fa-chart-line job-icon"></i> <!-- Industry Icon -->
+            <h3>Data Scientist</h3>
+          </div>
+          <p><strong>Industry:</strong> Tech / Analytics</p>
+          <p><strong>Location:</strong> Remote</p>
+          <p>With businesses relying more on data-driven decisions, the demand for data scientists is skyrocketing. Companies are looking for professionals who can help analyze large datasets.</p>
+          <!-- Job Growth Graph -->
+          <canvas id="dataScientistChart" width="400" height="150"></canvas>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="job-article">
+          <div class="job-header">
+            <i class="fas fa-bullhorn job-icon"></i> <!-- Industry Icon -->
+            <h3>Marketing Specialist</h3>
+          </div>
+          <p><strong>Industry:</strong> Marketing</p>
+          <p><strong>Location:</strong> New York, NY</p>
+          <p>Marketing specialists are in high demand to craft campaigns that are effective, targeted, and engage audiences across multiple platforms.</p>
+          <!-- Job Growth Graph -->
+          <canvas id="marketingChart" width="400" height="150"></canvas>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Example job growth chart for Software Engineer
+    var ctx1 = document.getElementById('softwareEngineerChart').getContext('2d');
+    var softwareEngineerChart = new Chart(ctx1, {
+      type: 'bar',
+      data: {
+        labels: ['2019', '2020', '2021', '2022', '2023'],
+        datasets: [{
+          label: 'Job Growth (%)',
+          data: [10, 15, 20, 25, 30],
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    // Example job growth chart for Data Scientist
+    var ctx2 = document.getElementById('dataScientistChart').getContext('2d');
+    var dataScientistChart = new Chart(ctx2, {
+      type: 'bar',
+      data: {
+        labels: ['2019', '2020', '2021', '2022', '2023'],
+        datasets: [{
+          label: 'Job Growth (%)',
+          data: [5, 10, 15, 20, 25],
+          backgroundColor: 'rgba(75, 192, 192, 0.2)',
+          borderColor: 'rgba(75, 192, 192, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    // Example job growth chart for Marketing Specialist
+    var ctx3 = document.getElementById('marketingChart').getContext('2d');
+    var marketingChart = new Chart(ctx3, {
+      type: 'bar',
+      data: {
+        labels: ['2019', '2020', '2021', '2022', '2023'],
+        datasets: [{
+          label: 'Job Growth (%)',
+          data: [8, 12, 18, 22, 28],
+          backgroundColor: 'rgba(255, 206, 86, 0.2)',
+          borderColor: 'rgba(255, 206, 86, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+<script src="./script.js"></script>
+</html>
