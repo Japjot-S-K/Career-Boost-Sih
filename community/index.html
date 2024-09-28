@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community | Career Boost</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navcontainer">
+      <a href="../index.html" class="logo">
+        <img src="../assets/logo.png" alt="CareerBoost Logo" />
+      </a>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="#features" class="dropdown-toggle">Services</a>
+          <ul class="dropdown-menu">
+              <li><a href="../Registration/index.html">AI Job Matching</a></li>
+              <li><a href="../courses/index.html">Courses</a></li>
+              <li><a href="../dashboard/index.html#skillGap">Skill Gap Analysis</a></li>
+              <li><a href="../JOb insights/inddex.html">Real-Time Market Insights</a></li>
+              <li><a href="../Resume/resume.html">Resume Builder</a></li>
+              <li><a href="../community/index.html">Community Support</a></li>
+              <li><a href="../workshop/index.html">Workshop</a></li>
+          </ul>
+        </li>
+        <li><a href="../dashboard/index.html">Dashboard</a></li>
+        <li><a href="../index.html#about">About Us</a></li>
+        <li>
+          <div class="navbar-button">
+            <a href="../Registration/index.html" class="btn btn-auth">Register / Login</a>
+          </div>            
+        </li>
+      </ul>
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidebar Navigation for Mobile -->
+  <div class="sidebar" id="sidebar">
+    <ul>
+        <li><a href="../index.html#features">Services</a></li>
+        <li><a href="../dashboard/index.html">Dashboard</a></li>
+        <li><a href="../index.html#about">About Us</a></li>
+        <li><a href="../Registration/index.html">Register / Login</a></li>
+    </ul>
+  </div>
+
+  <!-- Community Section -->
+  <section class="community-section">
+    <div class="container-community">
+      <h2>Community Forum</h2>
+      <p>Connect with other members, ask questions, and share job opportunities!</p>
+
+      
+
+      <!-- Featured Members -->
+      <div class="featured-members">
+        <h3>Featured Members</h3>
+        <div class="members">
+          <div class="member">
+            <img src="../assets/doc1.png" alt="Member Profile">
+            <p>Virgo Sans</p>
+            <span>Top Contributor</span>
+          </div>
+          <div class="member">
+            <img src="../assets/work1.webp" alt="Member Profile">
+            <p>Gala Smith</p>
+            <span>Active Member</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Post a Question -->
+      <div class="post-question">
+        <h3>Ask a Question</h3>
+        <form action="#" method="POST">
+          <textarea placeholder="What's your question?" required></textarea>
+          <button type="submit" class="btn">Post Question</button>
+        </form>
+      </div>
+
+      <!-- Trending Questions -->
+      <div class="trending-questions">
+        <h3>Trending Questions</h3>
+        <div class="questions">
+          <div class="question">
+            <i class="fas fa-fire"></i>
+            <h4>What are the most in-demand skills for 2024?</h4>
+          </div>
+          <div class="question">
+            <i class="fas fa-fire"></i>
+            <h4>How to negotiate salary in a new job offer?</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Discussions -->
+      <div class="questions-list">
+        <h3>Recent Discussions</h3>
+        <div class="question">
+          <h4>How to prepare for a technical interview?</h4>
+          <p><i class="fas fa-user"></i> Posted by John Doe | <i class="fas fa-clock"></i> 2 hours ago</p>
+          <a href="#" class="btn btn-reply">Reply</a>
+        </div>
+
+        <div class="question">
+          <h4>What are the best job search websites?</h4>
+          <p><i class="fas fa-user"></i> Posted by Jane Smith | <i class="fas fa-clock"></i> 1 day ago</p>
+          <a href="#" class="btn btn-reply">Reply</a>
+        </div>
+      </div>
+
+      <!-- Community Guidelines -->
+      <div class="community-guidelines">
+        <h3>Community Guidelines</h3>
+        <p>Please be respectful to other members. No spamming or irrelevant content. Keep discussions professional and on-topic.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

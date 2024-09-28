@@ -1,0 +1,362 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  line-height: 1.6;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #3367d6;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.navcontainer {
+  width: 97%;
+  margin: auto;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+.logo{
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  max-width: 150px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+.nav-links li a:hover {
+  text-decoration : underline #fff;
+}
+
+
+.navbar-button {
+  display: flex;
+}
+
+.nav-links li .btn-auth{
+  background-color: #fff; /* Orange color */
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav-links li .btn-auth:hover {
+  background-color: #ebf1ff; 
+  color: #000;
+  text-decoration: none;
+}
+
+/* Dropdown menu styling */
+.dropdown {
+  position: relative;
+  transition: all ease;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  display: none;
+  min-width: 200px;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+
+}
+
+.dropdown-menu li {
+  list-style: none;
+  padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #1756df; /* Same as navbar background color */
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #ebf1ff;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+
+
+/* Hamburger for Mobile View */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger i {
+  font-size: 24px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hidden initially */
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  transition: left 0.3s ease;
+  z-index: 999; /* On top of everything */
+  padding-top: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+.sidebar ul li a:hover {
+  background-color: #4a7ded;
+  padding-left: 10px;
+  transition: padding 0.3s ease;
+}
+
+/* Show Sidebar when active */
+.sidebar.active {
+  left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+      display: none;
+  }
+
+  .hamburger {
+      display: block;
+      color: white;
+  }
+}
+  
+/* Community Section Styling */
+.community-section {
+    /* margin-top: 100px; */
+    padding: 50px;
+    background: url('../assets/hjk.jpg') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    color: #8c7e7e; /* To make the text visible on the background image */
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Overlay effect to darken the background image */
+  .community-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Darkens the image for better text visibility */
+    z-index: -1; /* Sends the overlay behind the content */
+  }
+  /* ... Continue from your original styles ... */
+  .community-section .container-community {
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    gap: 20px; /* Add space between sections */
+  }  
+
+.community-section h2 {
+  color: #3367d6;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+
+
+/* Featured Members */
+.featured-members, .post-question, .trending-questions, .questions-list, .community-guidelines {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.featured-members h3, .post-question h3, .trending-questions h3, .questions-list h3, .community-guidelines h3 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.members {
+  display: flex;
+  gap: 30px;
+}
+
+.member {
+  text-align: center;
+}
+
+.member img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+  width: 50px;
+}
+
+.member p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.member span {
+  color: #777;
+  font-size: 14px;
+}
+
+/* Post a Question */
+.post-question textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.post-question .btn {
+  background-color: #3367d6;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Trending Questions */
+.trending-questions .questions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.trending-questions .question {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.trending-questions .question i {
+  font-size: 20px;
+  color: #ff5722;
+}
+
+/* Recent Discussions */
+.questions-list .question {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.questions-list .question h4 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.questions-list .question p {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.questions-list .question .btn-reply {
+  background-color: #4a7ded;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.questions-list .question .btn-reply:hover {
+  background-color: #3367d6;
+}
+
+/* Community Guidelines */
+.community-guidelines {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.community-guidelines p {
+  color: #555;
+  font-size: 16px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .members {
+    flex-direction: column;
+  }
+
+  .trending-questions .questions, .questions-list {
+    flex-direction: column;
+  }
+
+  .featured-members, .post-question, .trending-questions, .questions-list, .community-guidelines {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+}
