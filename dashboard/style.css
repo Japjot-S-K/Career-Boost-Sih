@@ -1,0 +1,313 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+}
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #3367d6;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.navcontainer {
+  width: 97%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  max-width: 150px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline #fff;
+}
+
+.navbar-button {
+  display: flex;
+}
+
+.nav-links li .btn-auth {
+  background-color: #fff; /* Orange color */
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav-links li .btn-auth:hover {
+  background-color: #ebf1ff;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Dropdown menu styling */
+.dropdown {
+  position: relative;
+  transition: all ease;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  display: none;
+  min-width: 200px;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.dropdown-menu li {
+  list-style: none;
+  padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #1756df; /* Same as navbar background color */
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #ebf1ff;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Hamburger for Mobile View */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger i {
+  font-size: 24px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hidden initially */
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  transition: left 0.3s ease;
+  z-index: 999; /* On top of everything */
+  padding-top: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+.sidebar ul li a:hover {
+  background-color: #4a7ded;
+  padding-left: 10px;
+  transition: padding 0.3s ease;
+}
+
+/* Show Sidebar when active */
+.sidebar.active {
+  left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    color: white;
+  }
+}
+
+/* Dashboard Layout */
+.dashboard {
+  padding-top: 60px;
+}
+
+/* Profile Overview Section */
+.profile-overview {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-info h2 {
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Job Matching Section */
+.job-matches {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.job-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.job-card {
+  background-color: #f4f4f4;
+  border: 1px solid #dfe6e9;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin: 10px;
+  flex: 0 1 calc(33.333% - 20px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease-in-out;
+  text-align: left;
+}
+
+.job-card h4 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+.job-card p {
+  font-size: 1.1em;
+  color: #444;
+  line-height: 1.6;
+}
+.job-card button {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #27ae60;
+  font-size: 1rem;
+}
+
+.job-card button:hover {
+  background-color: #2ecc71;
+}
+
+/* Skills Progress Section */
+.skills-progress {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.skills-progress progress {
+  width: 100%;
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+/* Market Insights Section */
+.market-insights {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .job-list {
+    flex-direction: column;
+  }
+
+  .job-card {
+    width: 100%;
+  }
+}

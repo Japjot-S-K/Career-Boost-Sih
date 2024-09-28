@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerBoost - Personalized Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navcontainer">
+      <a href="../index.html" class="logo">
+        <img src="../assets/logo.png" alt="CareerBoost Logo" />
+      </a>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="#features" class="dropdown-toggle">Services</a>
+          <ul class="dropdown-menu">
+              <li><a href="../Registration/index.html">AI Job Matching</a></li>
+              <li><a href="../courses/index.html">Courses</a></li>
+              <li><a href="../dashboard/index.html#skillGap">Skill Gap Analysis</a></li>
+              <li><a href="../JOb insights/inddex.html">Real-Time Market Insights</a></li>
+              <li><a href="../Resume/resume.html">Resume Builder</a></li>
+              <li><a href="../community/index.html">Community Support</a></li>
+              <li><a href="../workshop/index.html">Workshop</a></li>
+          </ul>
+        </li>
+        <li><a href="../dashboard/index.html">Dashboard</a></li>
+        <li><a href="../index.html#about">About Us</a></li>
+        <li>
+          <div class="navbar-button">
+            <a href="../Registration/index.html" class="btn btn-auth">Register / Login</a>
+          </div>            
+        </li>
+      </ul>
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidebar Navigation for Mobile -->
+  <div class="sidebar" id="sidebar">
+    <ul>
+        <li><a href="../index.html#features">Services</a></li>
+        <li><a href="../dashboard/index.html">Dashboard</a></li>
+        <li><a href="../index.html#about">About Us</a></li>
+        <li><a href="../Registration/index.html">Register / Login</a></li>
+    </ul>
+  </div>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard">
+        <!-- User Profile Overview (More Detailed) -->
+        <div class="profile-overview">
+            <img src="../assets/avatar.jpg" alt="User Profile Picture" class="profile-pic">
+            <div class="profile-info">
+                <h2>John Doe</h2>
+                <p><strong>Role:</strong> Frontend Developer</p>
+                <p><strong>Experience:</strong> 3 years</p>
+                <p><strong>Location:</strong> New York, USA</p>
+                <p><strong>Skills:</strong> JavaScript, React, HTML5, CSS3</p>
+                <p><strong>Qualifications:</strong> BSc in Computer Science</p>
+                <button>Edit Profile</button>
+            </div>
+        </div>
+
+        <!-- Job Matching Section (Horizontal Cards) -->
+        <div class="job-matches" id="skillGap">
+            <h3>Relevant Job Matches</h3>
+            <div class="job-list">
+                <!-- Job 1 -->
+                <div class="job-card">
+                    <h4>Senior Frontend Developer</h4>
+                    <p>Company: ABC Tech</p>
+                    <p>Location: Remote</p>
+                    <p><strong>Match:</strong> 85%</p>
+                    <button>Analyze skill gap</button>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="job-card">
+                    <h4>React Developer</h4>
+                    <p>Company: XYZ Corp</p>
+                    <p>Location: Pune, Maharashtra</p>
+                    <p><strong>Match:</strong> 78%</p>
+                    <button>Analyze skill gap</button>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="job-card">
+                    <h4>Full Stack Developer</h4>
+                    <p>Company: Startup Co</p>
+                    <p>Location: Bengaluru, Karnataka</p>
+                    <p><strong>Match:</strong> 92%</p>
+                    <button>Analyze skill gap</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Progress Section (Horizontal Bars) -->
+        <div class="skills-progress">
+            <h3>Skills & Learning Progress</h3>
+            <p>Frontend Development: 80% Completed</p>
+            <progress value="80" max="100"></progress>
+            <p>JavaScript Mastery: 65% Completed</p>
+            <progress value="65" max="100"></progress>
+            <p>React JS: 50% Completed</p>
+            <progress value="50" max="100"></progress>
+        </div>
+
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+</html>
