@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Wizard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navcontainer">
+      <a href="../index.html" class="logo">
+        <img src="../assets/logo.png" alt="CareerBoost Logo" />
+      </a>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="#features" class="dropdown-toggle">Services</a>
+          <ul class="dropdown-menu">
+              <li><a href="../Registration/index.html">AI Job Matching</a></li>
+              <li><a href="../courses/index.html">Courses</a></li>
+              <li><a href="../dashboard/index.html#skillGap">Skill Gap Analysis</a></li>
+              <li><a href="../JOb insights/inddex.html">Real-Time Market Insights</a></li>
+              <li><a href="../Resume/resume.html">Resume Builder</a></li>
+              <li><a href="../community/index.html">Community Support</a></li>
+              <li><a href="../workshop/index.html">Workshop</a></li>
+          </ul>
+        </li>
+        <li><a href="../dashboard/index.html">Dashboard</a></li>
+        <li><a href="../index.html#about">About Us</a></li>
+        <li>
+          <div class="navbar-button">
+            <a href="../Registration/index.html" class="btn btn-auth">Register / Login</a>
+          </div>            
+        </li>
+      </ul>
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidebar Navigation for Mobile -->
+  <div class="sidebar" id="sidebar">
+    <ul>
+        <li><a href="../index.html#features">Services</a></li>
+        <li><a href="../dashboard/index.html">Dashboard</a></li>
+        <li><a href="../index.html#about">About Us</a></li>
+        <li><a href="../Registration/index.html">Register / Login</a></li>
+    </ul>
+  </div>
+
+    <center><h2 class="heading">Resume Wizard</h2></center>
+    
+    <!-- New container for resume form and display -->
+    <div class="resume-container">
+        <!-- Resume Form -->
+        <form id="resumeForm">
+            <!-- Personal Information Section -->
+            <section id="personalInfoSection">
+                <h2>Personal Information</h2>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="e.g., Jake Ryan" required><br><br>
+
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone" placeholder="e.g., 123-456-7890" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder=" e.g., jake@su.edu" required><br><br>
+
+                <label for="linkedin">LinkedIn:</label>
+                <input type="text" id="linkedin" name="linkedin" placeholder=" e.g., linkedin.com/in/jake "><br><br>
+
+                <label for="github">GitHub:</label>
+                <input type="text" id="github" name="github" placeholder=" e.g., github.com/jake"><br><br>
+
+                <button type="button" id="nextToEducation">Next: Education</button>
+            </section>
+
+            <!-- Education Section -->
+            <section id="educationSection" style="display:none;">
+                <h2>Education</h2>
+                <div id="educationContainer">
+                    <div class="educationBlock">
+                        <label for="degree">Degree:</label>
+                        <input type="text" name="degree" placeholder="e.g., Bachelor of Technology in Computer Science" id="degree" required><br><br>
+
+                        <label for="school">School:</label>
+                        <input type="text" name="school" placeholder="e.g., Southwestern University" id="school" required><br><br>
+
+                        <label for="location">Location:</label>
+                        <input type="text" name="location" placeholder="e.g., Georgetown, TX" id="location" required><br><br>
+
+                        <label for="duration">Duration:</label>
+                        <input type="text" name="duration" placeholder="e.g., Aug. 2018 – May 2021" id="duration" required><br><br>
+
+                        <button type="button" class="addEducation">Add Education</button>
+                    </div>
+                </div>
+                <button type="button" id="previousToPersonalInfo">Previous: Personal Info</button>
+                <button type="button" id="nextToExperience">Next: Experience</button>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experienceSection" style="display:none;">
+                <h2>Experience</h2>
+                <div id="experienceContainer">
+                    <div class="experienceBlock">
+                        <label for="jobTitle">Job Title:</label>
+                        <input type="text" name="jobTitle" placeholder="e.g., Software Developer" id="jobTitle" required><br><br>
+
+                        <label for="company">Company:</label>
+                        <input type="text" name="company" placeholder="e.g., Google" id="company" required><br><br>
+
+                        <label for="expLocation">Location:</label>
+                        <input type="text" name="expLocation" placeholder="e.g., Georgetown, TX" id="expLocation" required><br><br>
+
+                        <label for="expDuration">Duration:</label>
+                        <input type="text" name="expDuration" placeholder="e.g., June 2020 – Present" id="expDuration" required><br><br>
+
+                        <label for="expDescription">Description:</label>
+                        <textarea name="expDescription" placeholder="Enter Description of Experience" id="expDescription" required></textarea><br><br>
+
+                        <button type="button" class="addExperience">Add Experience</button>
+                    </div>
+                </div>
+                <button type="button" id="previousToEducation">Previous: Education</button>
+                <button type="button" id="nextToProjects">Next: Projects</button>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projectsSection" style="display:none;">
+                <h2>Projects</h2>
+                <div id="projectsContainer">
+                    <div class="projectBlock">
+                        <label for="projectTitle">Project Title:</label>
+                        <input type="text" name="projectTitle" placeholder="e.g., Simple Paintball" id="projectTitle" required><br><br>
+
+                        <label for="techStack">Technologies Used:</label>
+                        <input type="text" name="techStack" placeholder="e.g., Python, Flask, React, PostgreSQL, Docker" id="techStack" required><br><br>
+
+                        <label for="projectDuration">Duration:</label>
+                        <input type="text" name="projectDuration" placeholder="e.g., June 2020 – Present" id="projectDuration" required><br><br>
+
+                        <label for="projectDescription">Description:</label>
+                        <textarea name="projectDescription" placeholder="Enter Description of Project" id="projectDescription" required></textarea><br><br>
+
+                        <button type="button" class="addProject">Add Project</button>
+                    </div>
+                </div>
+                <button type="button" id="previousToExperience">Previous: Experience</button>
+                <button type="button" id="nextToTechnicalSkills">Next: Technical Skills</button>
+            </section>
+
+            <!-- Technical Skills Section -->
+            <section id="technicalSkillsSection" style="display:none;">
+                <h2>Technical Skills</h2>
+
+                <label for="languages">Languages:</label>
+                <input type="text" id="languages" name="languages" placeholder="e.g., Java, Python, C++"><br><br>
+
+                <label for="frameworks">Frameworks:</label>
+                <input type="text" id="frameworks" name="frameworks" placeholder="e.g., React, Node.js"><br><br>
+
+                <label for="developerTools">Developer Tools:</label>
+                <input type="text" id="developerTools" name="developerTools" placeholder="e.g., Git, Docker"><br><br>
+
+                <label for="libraries">Libraries:</label>
+                <input type="text" id="libraries" name="libraries" placeholder="e.g., pandas, NumPy"><br><br>
+
+                <button type="button" id="addSkills">Add Skills</button>
+                <button type="button" id="previousToProjects">Previous: Projects</button>
+            </section>
+
+            <div class="disclaimer">
+              <p><strong>Disclaimer:</strong> For the best experience, we recommend using a desktop or laptop to build and download your resume. While this resume wizard is fully responsive, downloading your resume as a PDF is optimized for desktop environments to ensure proper formatting and high-quality output.</p>
+          </div>
+        </form>
+        <!-- Button to Download as PDF -->
+    <button id="downloadPdf" class="download-btn">Download PDF</button>
+
+
+        <!-- Display resume -->
+        <div id="resumeDisplay" class="resume" style="font-family: 'Times New Roman', Times, serif;">
+            <h1 id="nameDisplay">Jake Ryan</h1>
+            <p id="contactDisplay">123-456-7890 | jake@su.edu | linkedin.com/in/jake | github.com/jake</p>
+
+            <!-- Education Section Display -->
+            <div id="educationDisplay">
+                <h2>EDUCATION</h2>
+            </div>
+
+            <!-- Experience Section Display -->
+            <div id="experienceDisplay">
+                <h2>EXPERIENCE</h2>
+            </div>
+
+            <!-- Projects Section Display -->
+            <div id="projectsDisplay">
+                <h2>PROJECTS</h2>
+            </div>
+
+            <!-- Technical Skills Section Display -->
+            <div id="technicalSkillsDisplay">
+                <h2>TECHNICAL SKILLS</h2>
+                <p id="languagesDisplay"><strong>Languages:</strong></p>
+                <p id="frameworksDisplay"><strong>Frameworks:</strong></p>
+                <p id="developerToolsDisplay"><strong>Developer Tools:</strong></p>
+                <p id="librariesDisplay"><strong>Libraries:</strong></p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- jsPDF and html2canvas Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
