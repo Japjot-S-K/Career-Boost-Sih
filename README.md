@@ -3,6 +3,9 @@
 An innovative platform designed to bridge the gap between individual skills and job market demands through **AI-powered assessments**, **personalized career guidance**, **skill gap analysis**, **targeted learning programs**, **live workshops**, and **resume-building tools**.
 
 ---
+## Live Website Link
+https://japjot-s-k.github.io/Career-Boost-Sih/
+
 
 ## 🚀 Project Overview
 
